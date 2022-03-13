@@ -15,22 +15,21 @@
     const writable_value = getContext("RadioGroup_value");
     $: RadioGroup_value = $writable_value;
     const RadioGroup_props = getContext("RadioGroup_props");
-    const RadioGroup_disabled = getContext("RadioGroup_disabled");
     const RadioGroup_change = getContext("RadioGroup_change");
-
+    const isGroup = () => {
+        return RadioGroup_value != undefined ? true : false;
+    };
     if (RadioGroup_props != undefined) {
         size = RadioGroup_props.size;
     }
 
     let focus = false;
     $: ischecked = value === label ? true : false;
-    $: isDisabled = isGroup() ? RadioGroup_disabled || disabled : disabled;
+    $: isDisabled = isGroup() ? RadioGroup_props.disabled || disabled : disabled;
     $: tabindex = isDisabled || (isDisabled && value !== label) ? -1 : 0;
     $: value = isGroup() ? RadioGroup_value : value;
 
-    const isGroup = () => {
-        return RadioGroup_value != undefined ? true : false;
-    };
+    
     $: classList = clsx("el-radio-button", [size != undefined ? `el-radio-button--${size}` : "", { "is-active": ischecked }, { "is-disabled": isDisabled }, { "is-focus": focus }], $$props["class"]);
 
     function handleKeydown(e) {
@@ -52,7 +51,7 @@
     let isprops = RadioGroup_props != undefined;
     $: sy0 = ischecked ? isprops && RadioGroup_props.fill || "" : isprops && RadioGroup_props.backgroundcolor || "";
     let sy1 = isprops && RadioGroup_props.fill || "";
-    let sy2 = isprops && RadioGroup_props.textcolor || "";
+    let sy2 = isprops && RadioGroup_props.textColor || "";
     $: styleList = clsx({
         [`background-color:${sy0};`]: isprops,
         [`border-color:${sy1};`]: isprops,

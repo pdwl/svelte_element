@@ -1,8 +1,8 @@
 <script>
     /**
-    * @description 2022年3月8日02:42:28
-    * @example 翻了好久的谷歌，找到了解决办法
-    */
+     * @description 2022年3月8日02:42:28
+     * @example 翻了好久的谷歌，找到了解决办法
+     */
     import clsx from "./../common/clsx/index";
     export let text = undefined;
     export let value = undefined;
@@ -18,8 +18,8 @@
     const RadioGroup_props = getContext("RadioGroup_props");
     const RadioGroup_disabled = getContext("RadioGroup_disabled");
     const RadioGroup_change = getContext("RadioGroup_change");
-    
-    if(RadioGroup_props!= undefined){
+
+    if (RadioGroup_props != undefined) {
         size = RadioGroup_props.size;
     }
 

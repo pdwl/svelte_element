@@ -13,10 +13,10 @@ import { Radio, RadioGroup, RadioButton } from "./index";
     '1',
 ];
     const Radiochange = (e) => {
-        console.log(e.detail.target.value);
+        console.log(e);
     };
     const RadioGroupchange = (e) => {
-        console.log(e.detail);
+        console.log(e);
     };
 </script>
 <Radio bind:value="{test[0]}" label="1" text="提示文本" />
@@ -40,19 +40,19 @@ import { Radio, RadioGroup, RadioButton } from "./index";
 <Radio bind:value="{test[5]}" disabled label="选中且禁用">备选项</Radio>
 <hr/>
 
-<RadioGroup bind:value="{test[6]}" radiodata={[
+<RadioGroup bind:value="{test[6]}" label={[
     {value:'3',label:'3',text:'自动创建1'},
     {value:'6',label:'6',text:'自动创建2'},
     {value:'9',label:'9',text:'自动创建3'},
 ]}/>
 <hr/>
-<RadioGroup bind:value="{test[6]}" radiodata={[
+<RadioGroup bind:value="{test[6]}" label={[
     {value:'3',label:'3',text:'自动创建1'},
     {value:'6',label:'6',text:'自动创建2',disabled:true},
     {value:'9',label:'9',text:'自动创建3'},
 ]}/>
 <hr/>
-<RadioGroup bind:value="{test[6]}" radiodata={['3','6','9',]}/>
+<RadioGroup bind:value="{test[6]}" label={['3','6','9',]}/>
 <hr/>
 
 <RadioGroup bind:value="{test[6]}" on:change={RadioGroupchange}>
