@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import { getContext } from "svelte";
     export let height = "60px";
     const isFooter = getContext("isFooter");

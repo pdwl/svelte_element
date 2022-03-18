@@ -3,7 +3,7 @@
      * @description 2022年3月8日02:42:28
      * @example 翻了好久的谷歌，找到了解决办法
      */
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     export let text = undefined;
     export let value = undefined;
     export let label = undefined;

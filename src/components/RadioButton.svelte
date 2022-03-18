@@ -3,7 +3,7 @@
      * @description 2022年3月8日16:59:31
      * @example 类似隔壁热
      */
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     export let text = undefined;
     export let value = undefined;
     export let label = undefined;

@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import { setContext } from "svelte";
     import { writable } from "svelte/store";
     export let gutter = 0;

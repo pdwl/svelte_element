@@ -1,5 +1,5 @@
 <script>
-	import { Button, ButtonGroup } from "./index.js";
+	import { Row, Button, ButtonGroup } from "./index.js";
 	function onclick(e) {
 		alert("按钮");
 	}
@@ -41,24 +41,24 @@
 	<Button type="danger" icon="delete" circle />
 	<br />
 	<br />
-	<el-row>
+	<Row>
 		<Button disabled>默认按钮</Button>
 		<Button type="primary" disabled>主要按钮</Button>
 		<Button type="success" disabled>成功按钮</Button>
 		<Button type="info" disabled>信息按钮</Button>
 		<Button type="warning" disabled>警告按钮</Button>
 		<Button type="danger" disabled>危险按钮</Button>
-	</el-row>
+	</Row>
 	<br />
 	<br />
-	<el-row>
+	<Row>
 		<Button plain disabled>朴素按钮</Button>
 		<Button type="primary" plain disabled>主要按钮</Button>
 		<Button type="success" plain disabled>成功按钮</Button>
 		<Button type="info" plain disabled>信息按钮</Button>
 		<Button type="warning" plain disabled>警告按钮</Button>
 		<Button type="danger" plain disabled>危险按钮</Button>
-	</el-row>
+	</Row>
 	<br />
 	<br />
 	<Button type="text">文字按钮</Button>
@@ -86,20 +86,28 @@
 	<Button type="primary" loading>加载中</Button>
 	<br />
 	<br />
-	<el-row>
+	<Row>
 		<Button>默认按钮</Button>
 		<Button size="medium">中等按钮</Button>
 		<Button size="small">小型按钮</Button>
 		<Button size="mini">超小按钮</Button>
-	</el-row>
-	<el-row>
+	</Row>
+	<Row>
 		<Button round>默认按钮</Button>
 		<Button size="medium" round>中等按钮</Button>
 		<Button size="small" round>小型按钮</Button>
 		<Button size="mini" round>超小按钮</Button>
-	</el-row>
+	</Row>
 	<br />
 	<br />
+
+	<ButtonGroup
+		options={[
+			{ type: "primary", icon: "edit",text:'按钮一' },
+			{ type: "primary", icon: "share",text:'按钮二' },
+			{ type: "primary", icon: "delete" ,text:'按钮三'},
+		]}
+	/>
 </main>
 
 <style>

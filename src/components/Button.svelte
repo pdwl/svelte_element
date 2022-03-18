@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     export let text = undefined;
     export let size = "";
     export let type = "default";

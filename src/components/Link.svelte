@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import { createEventDispatcher } from "svelte";
     export let type = "default";
     export let disabled = undefined;

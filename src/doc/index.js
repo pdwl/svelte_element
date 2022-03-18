@@ -15,5 +15,6 @@ import RadioGroup from "./../components/RadioGroup.svelte";
 import Checkbox from "./../components/Checkbox.svelte";
 import CheckboxGroup from "./../components/CheckboxGroup.svelte";
 import CheckboxButton from "./../components/CheckboxButton.svelte";
+import Input from "./../components/Input.svelte";
 
-export { Row, Col, Button, ButtonGroup, Container, Header, Main, Footer, Aside, Icon, Link, Radio, RadioButton, RadioGroup, Checkbox, CheckboxGroup, CheckboxButton }
+export { Row, Col, Button, ButtonGroup, Container, Header, Main, Footer, Aside, Icon, Link, Radio, RadioButton, RadioGroup, Checkbox, CheckboxGroup, CheckboxButton, Input }

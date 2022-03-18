@@ -10,7 +10,9 @@
     import Link from './doc/Link.svelte';
     import Radio from './doc/Radio.svelte';
     import Checkbox from './doc/Checkbox.svelte';
+    import Input from './doc/Input.svelte';
     let routes = {
+        '/input':Input,
         '/checkbox':Checkbox,
         '/radio':Radio,
         '/link':Link,

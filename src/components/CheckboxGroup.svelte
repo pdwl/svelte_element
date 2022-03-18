@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import Checkbox from "./Checkbox.svelte";
     import CheckboxButton from "./CheckboxButton.svelte";
     export let group = [];

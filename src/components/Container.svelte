@@ -1,5 +1,5 @@
 <script>
-  import clsx from './../common/clsx/index'
+  import clsx from '../common/clsx'
   import { setContext, onMount } from "svelte";
   import { writable, get } from "svelte/store";
 

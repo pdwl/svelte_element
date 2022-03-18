@@ -3,7 +3,7 @@
      * @description 2022年3月8日12:19:23
      * @example 类似隔壁热
      */
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import { setContext, createEventDispatcher } from "svelte";
     import { writable } from "svelte/store";
     import Radio from "./Radio.svelte";

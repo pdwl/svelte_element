@@ -1,5 +1,5 @@
 <script>
-    import clsx from "./../common/clsx/index";
+    import clsx from "../common/clsx";
     import { getContext, createEventDispatcher } from "svelte";
 
     export let text = undefined;

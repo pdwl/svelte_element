@@ -15,4 +15,5 @@
 <Row><a href="#/link"><Button text="Link 文字链接"/></a></Row>
 <hr>
 <Row><a href="#/radio"><Button text="radio 单选按钮"/></a></Row>
-<Row><a href="#/checkbox"><Button text="checkbox 复选按钮，还没做"/></a></Row>
+<Row><a href="#/checkbox"><Button text="checkbox 多选框"/></a></Row>
+<Row><a href="#/input"><Button text="Input 输入框"/></a></Row>
