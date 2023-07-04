@@ -17,7 +17,7 @@
   const _radioGroup = writable({ value, size, fill, textColor, disabled });
   setContext("_radioGroup", _radioGroup);
   // console.log("🚀 ~ file: RadioGroup.svelte:19 ~ _radioGroup:", $_radioGroup);
-
+ 
   // 监控写入的变量，这边实时回调赋值
   _radioGroup.subscribe((e) => {
     value = e.value;
