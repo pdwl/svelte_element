@@ -1,47 +1,67 @@
-# Svelte + TS + Vite
+# Svelte + TS + Vite + elementUI
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+# Svelte ElemeUI 组件
 
-## Recommended IDE Setup
+这个项目提供了一套基于Svelte框架和ElemeUI技术的可重用组件集合。ElemeUI是一个功能强大的UI组件库，提供了许多常用的UI组件，可以帮助您快速构建漂亮的用户界面。
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## 安装
 
-## Need an official Svelte framework?
+使用此组件集合之前，请确保您已经安装了Svelte框架和ElemeUI。如果您尚未安装它们，可以按照以下步骤进行安装：
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+1. 在命令行中，进入您的项目目录。
+2. 运行以下命令安装Svelte框架：
 
-## Technical considerations
+   ```
+   npx degit sveltejs/template svelte-app
+   cd svelte-app
+   npm install
+   ```
 
-**Why use this over SvelteKit?**
+3. 运行以下命令安装ElemeUI：
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+   ```
+   npm install @maiji/svelte_element
+   ```
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## 使用示例
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+在您的Svelte项目中，您可以通过以下步骤来使用ElemeUI组件：
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+1. 导入需要的组件：
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+   ```javascript
+   import { Button, Input, Modal } from '@maiji/svelte_element';
+   ```
 
-**Why include `.vscode/extensions.json`?**
+2. 在您的组件中使用这些组件：
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+   ```html
+   <Button>点击我</Button>
+   <Input placeholder="请输入内容" />
+   ```
 
-**Why enable `allowJs` in the TS template?**
+3. 根据ElemeUI文档中提供的配置选项和事件，调整组件的外观和行为。
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+## 贡献指南
 
-**Why is HMR not preserving my local component state?**
+欢迎贡献您的Svelte ElemeUI组件！如果您希望修复错误、添加新功能或提供改进建议，请按照以下步骤操作：
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+1. 提交问题：如果您发现任何问题，请在GitHub存储库中创建一个新的Issue来描述它。
+2. 分支：创建一个新的分支以进行更改。
+3. 修改：在分支上进行所需的更改。
+4. 测试：在本地测试您的更改，确保没有引入新的问题。
+5. 提交：将您的更改提交到GitHub存储库中。
+6. 请求合并：创建一个Pull Request请求将您的更改合并到主分支中。
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+请记住，在贡献代码之前，请阅读我们的贡献指南，以了解更多详细信息。
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+## 联系我们
+
+如果您有任何相关问题或疑问，请随时联系我们。您可以在以下位置找到我们：
+
+- GitHub存储库：[https://github.com/pdwl/svelte_element](https://github.com/pdwl/svelte_element)
+- 电子邮件：pd87@qq.com
+
+## 许可证
+
+此项目基于[MIT许可证](LICENSE)进行授权。请阅读许可证以了解更多详细信息。
