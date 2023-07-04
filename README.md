@@ -1,53 +1,47 @@
-**我只是一个搬运工，官方ui文档：https://element.eleme.cn/  
-I'm just a porter, official UI document: https://element.eleme.cn/**
+# Svelte + TS + Vite
 
-------------
+This template should help get you started developing with Svelte and TypeScript in Vite.
 
-## 基本说明
-- svelte 3.0版本
-- 不支持ts 不支持ts 不支持ts 【因为我还没有学会】
+## Recommended IDE Setup
 
-## 安装
-```shell
-npm install @maiji/svelte_element
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+
+## Need an official Svelte framework?
+
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+
+## Technical considerations
+
+**Why use this over SvelteKit?**
+
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+
+This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+
+**Why include `.vscode/extensions.json`?**
+
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+
+**Why enable `allowJs` in the TS template?**
+
+While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+
+**Why is HMR not preserving my local component state?**
+
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+
+```ts
+// store.ts
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
 ```
-
-## 配置
-- 不使用图标，可以直接引入css，在main.js文件
-```shell
-import '@maiji/svelte_element/element/index.css'
-```
-- 使用图标，在public/index.html 添加
-```shell
-<link rel='stylesheet' href='/Element/index.css'>
-```
-  Element的主题文件包：[跳转连接](https://element.eleme.cn/#/zh-CN/theme/preview)  
-  只需要用到theme文件夹内容
-  
-## 使用
-
-```
-<script>
-	import { Button, ButtonGroup } from "@maiji/svelte_element";
-	function onclick(e) {
-		alert("ok");
-	}
-</script>
-
-<main>
-	<Button />
-	<Button type="primary" text={"主要按钮"} />
-	<br /><br />
-	<Button on:click={onclick}>默认按钮</Button>
-	<Button type="primary">主要按钮</Button>
-	<Button type="success">成功按钮</Button>
-	<Button type="info">信息按钮</Button>
-	<Button type="warning">警告按钮</Button>
-	<Button type="danger">危险按钮</Button>
-</main>
-```
-## 写在后面
-- 劲量做到与官方文档一致
-- 本是后端php程序员，接触前端让我看到了新世界的大门。代码写的不好，初学者见谅。
-- 本人是独立开发者，都是自学，未接触开放式学习，希望能接触大佬，带我飞 ^_^
-- email：pd87@qq.com
